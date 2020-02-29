@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象操作练习</title>
+    <script>
+        function fun() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        alert(fun.length);
+
+        var student = new Array("liu","hai","feng");
+        student.push("shi");
+        document.write(student+"<br>")
+
+        var time = new Date();
+        document.write(time.toLocaleString()+"<br>");
+
+        document.write(time.getTime()+"<br>")
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

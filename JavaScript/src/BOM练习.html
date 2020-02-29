@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM练习</title>
+
+</head>
+<body>
+    <img src="img/on.gif" id="light">
+<script>
+    var s = document.getElementById("light");
+    var flag = true;
+    s.onclick =function() {
+
+        if(flag){
+            s.src = "img/off.gif";
+            flag = false;
+        }else{
+            s.src  = "img/on.gif";
+            flag = true;
+        }
+    };
+    window.close();
+    alert(typeof confirm("ok?"));
+
+
+</script>
+</body>
+</html>

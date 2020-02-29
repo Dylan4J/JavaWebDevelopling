@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bootstrap/Bootstrap.iml" filepath="$PROJECT_DIR$/Bootstrap/Bootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaBasic/JavaBasic.iml" filepath="$PROJECT_DIR$/JavaBasic/JavaBasic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" filepath="$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat_loginTest/tomcat_loginTest.iml" filepath="$PROJECT_DIR$/tomcat_loginTest/tomcat_loginTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcate/tomcate.iml" filepath="$PROJECT_DIR$/tomcate/tomcate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xml/xml.iml" filepath="$PROJECT_DIR$/xml/xml.iml" />
+    </modules>
+  </component>
+</project>
