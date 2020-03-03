@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaBasic/JavaBasic.iml" filepath="$PROJECT_DIR$/JavaBasic/JavaBasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" filepath="$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tomcat_fileDownload/tomcat_fileDownload.iml" filepath="$PROJECT_DIR$/tomcat_fileDownload/tomcat_fileDownload.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcat_loginTest/tomcat_loginTest.iml" filepath="$PROJECT_DIR$/tomcat_loginTest/tomcat_loginTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcate/tomcate.iml" filepath="$PROJECT_DIR$/tomcate/tomcate.iml" />
       <module fileurl="file://$PROJECT_DIR$/xml/xml.iml" filepath="$PROJECT_DIR$/xml/xml.iml" />

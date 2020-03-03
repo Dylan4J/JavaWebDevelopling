@@ -11,7 +11,7 @@ import java.io.IOException;
 public class FailServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setCharacterEncoding("utf-8");
+        resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().write("登录失败！");
     }
 
