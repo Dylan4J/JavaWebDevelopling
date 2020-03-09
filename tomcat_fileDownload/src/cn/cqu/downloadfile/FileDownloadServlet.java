@@ -36,7 +36,7 @@ public class FileDownloadServlet extends HttpServlet  {
         byte[] buff = new byte[1024*8];
         int len = 0;
         while ((len = fis.read(buff))!=-1){
-            ops.write(buff);
+            ops.write(buff,0,len);
         }
         ops.close();
         fis.close();
