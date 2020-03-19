@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HTML/HTML.iml" filepath="$PROJECT_DIR$/HTML/HTML.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasic/JavaBasic.iml" filepath="$PROJECT_DIR$/JavaBasic/JavaBasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StudentsGradesSystem/StudentsGradesSystem.iml" filepath="$PROJECT_DIR$/StudentsGradesSystem/StudentsGradesSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/jstl_el/jstl_el.iml" filepath="$PROJECT_DIR$/jstl_el/jstl_el.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" filepath="$PROJECT_DIR$/tomcat_2.0/tomcat_2.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/tomcat_cookies/tomcat_cookies.iml" filepath="$PROJECT_DIR$/tomcat_cookies/tomcat_cookies.iml" />
