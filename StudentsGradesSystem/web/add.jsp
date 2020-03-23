@@ -45,8 +45,8 @@
 
         <div class="form-group">
             <label>性别：</label>
-            <input type="radio" name="sex" value="false" checked="checked"/>男
-            <input type="radio" name="sex" value="true"/>女
+            <input type="radio" name="gender" value="false" checked="checked"/>男
+            <input type="radio" name="gender" value="true"/>女
         </div>
 
         <div class="form-group">

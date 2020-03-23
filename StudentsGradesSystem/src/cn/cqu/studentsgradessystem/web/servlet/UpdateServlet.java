@@ -1,4 +1,4 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.service.ListService;
@@ -33,7 +33,7 @@ public class UpdateServlet extends HttpServlet {
         //调用service方法修改数据
         ListService listService = new ListServiceImpl();
         listService.updataSingle(student);
-        request.getRequestDispatcher("/findByPageServlet").forward(request,response);
+        response.sendRedirect(request.getContextPath()+"/findByPageServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

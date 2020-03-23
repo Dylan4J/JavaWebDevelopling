@@ -86,7 +86,9 @@ public class ListDaoImpl implements ListDao {
         StringBuilder s = new StringBuilder("select * from students where 1 = 1");
         List paras = new ArrayList();
         for (Map.Entry<String,String[]> entry : condition.entrySet()) {
-            if("currentPage".equals(entry.getKey()) || "rows".equals(entry.getKey())){
+            if("currentPage".equals(entry.getKey())
+                    || "rows".equals(entry.getKey())
+                    || "uid".equals(entry.getKey())){
                 continue;
             }
             String value = entry.getValue()[0];
@@ -115,7 +117,9 @@ public class ListDaoImpl implements ListDao {
         List paras = new ArrayList();
 
         for (Map.Entry<String,String[]> entry : condition.entrySet()) {
-            if("currentPage".equals(entry.getKey()) || "rows".equals(entry.getKey())){
+            if("currentPage".equals(entry.getKey())
+                    || "rows".equals(entry.getKey())
+                    || "uid".equals(entry.getKey())){
                 continue;
             }
             String value = entry.getValue()[0];

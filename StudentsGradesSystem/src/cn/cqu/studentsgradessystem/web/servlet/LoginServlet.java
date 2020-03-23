@@ -1,4 +1,4 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import cn.cqu.studentsgradessystem.dao.AdministratorDao;
 import cn.cqu.studentsgradessystem.dao.impl.AdministratorDaoImpl;

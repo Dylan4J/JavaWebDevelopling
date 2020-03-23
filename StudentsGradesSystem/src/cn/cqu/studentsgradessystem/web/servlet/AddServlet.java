@@ -1,10 +1,11 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.service.ListService;
 import cn.cqu.studentsgradessystem.service.impl.ListServiceImpl;
 import org.apache.commons.beanutils.BeanUtils;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +15,9 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
+/**
+ * 添加单个学生的成绩信息
+ */
 @WebServlet(urlPatterns = "/addServlet")
 public class AddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -33,7 +37,7 @@ public class AddServlet extends HttpServlet {
         //调用底层服务添加数据
         ListService listService = new ListServiceImpl();
         listService.add(newStudent);
-        request.getRequestDispatcher("/findByPageServlet").forward(request,response);
+        response.sendRedirect(request.getContextPath()+"/findByPageServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,5 +1,6 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
+import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.service.ListService;
 import cn.cqu.studentsgradessystem.service.impl.ListServiceImpl;
 
@@ -10,13 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/delSelectedServlet")
-public class DelSelectedServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/findOneServlet")
+public class FindOneServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
-        ListService listService = new ListServiceImpl();
-        listService.delSelectedStu(request.getParameterValues("check"));
-        request.getRequestDispatcher("/findByPageServlet").forward(request,response);
+        ListService listService  = new ListServiceImpl();
+        Student stu = listService.findById(Integer.parseInt(request.getParameter("uid")));
+        request.setAttribute("stu",stu);
+        request.getRequestDispatcher("/update.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

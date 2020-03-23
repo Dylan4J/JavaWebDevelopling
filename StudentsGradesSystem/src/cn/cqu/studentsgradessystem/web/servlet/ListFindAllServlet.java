@@ -1,4 +1,4 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.service.ListService;
@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(urlPatterns = "/findOneServlet")
-public class FindOneServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/listFindAllServlet")
+public class ListFindAllServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ListService listService  = new ListServiceImpl();
-        Student stu = listService.findById(Integer.parseInt(request.getParameter("uid")));
-        request.setAttribute("stu",stu);
-        request.getRequestDispatcher("/update.jsp").forward(request,response);
+        ListService listService = new ListServiceImpl();
+        List<Student> students = listService.finAll();
+        request.setAttribute("allStudents",students);
+        request.getRequestDispatcher("/list.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

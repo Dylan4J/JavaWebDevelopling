@@ -1,4 +1,4 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import cn.cqu.studentsgradessystem.domain.PageBean;
 import cn.cqu.studentsgradessystem.domain.Student;

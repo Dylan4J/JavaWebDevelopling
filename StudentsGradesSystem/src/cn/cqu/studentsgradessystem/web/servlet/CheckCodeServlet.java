@@ -1,4 +1,4 @@
-package cn.cqu.studentsgradessystem.web;
+package cn.cqu.studentsgradessystem.web.servlet;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
