@@ -40,33 +40,29 @@
     </style>
 
     <script>
-        window.onload = function(){
+        $(function () {
             //给删除选中按钮添加单击事件
-            document.getElementById("delSelected").onclick = function() {
-                if (confirm("您确定要删除吗？")) {
-                    var flag = false;
-                    var cbs = document.getElementsByName("check");
-                    for (var i = 0; i < cbs.length; i++) {
-                        if (cbs[i].checked) {
+            $("#delSelected").click(function () {
+               if (confirm("您确定要删除吗？")){
+                   var flag = false;
+                   $("input[name='check']").each(function (i,element) {
+                        if (element.checked){
                             flag = true;
-                            break;
+                            return false;
                         }
-                    }
-                    if (flag) {
-                        document.getElementById("form").submit();
-                    }
-                }
-            }
-
-            document.getElementById("firstCb").onclick = function () {
-                var cbs = document.getElementsByName("check");
-                for (var i = 0; i < cbs.length; i++) {
-                    cbs[i].checked = this.checked;
-                }
-            }
-        }
+                   });
+                   if (flag){
+                       $("#form").submit();
+                   };
+               };
+           });
+            //单机进行全选以及全不选
 
 
+        });
+        function selectAll(obj){
+            $("input[type='checkbox']:gt(0)").prop("checked",obj.checked);
+        };
     </script>
 
 </head>
@@ -99,7 +95,7 @@
     <form action="${pageContext.request.contextPath}/delSelectedServlet" id="form" method="post">
         <table border="1" class="table table-bordered table-hover">
             <tr class="success">
-                <th><input type="checkbox" name="checkFir" id="firstCb"></th>
+                <th><input type="checkbox" name="checkFir" id="firstCb" onclick="selectAll(this)"></th>
                 <th>编号</th>
                 <th>姓名</th>
                 <th>性别</th>
