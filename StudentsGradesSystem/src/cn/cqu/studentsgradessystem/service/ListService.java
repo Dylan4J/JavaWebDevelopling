@@ -1,5 +1,6 @@
 package cn.cqu.studentsgradessystem.service;
 
+import cn.cqu.studentsgradessystem.domain.Administator;
 import cn.cqu.studentsgradessystem.domain.PageBean;
 import cn.cqu.studentsgradessystem.domain.Student;
 
@@ -32,4 +33,5 @@ public interface ListService {
     PageBean findByPage(int currentPage, int rows, Map<String,String[]> condition);
 
 
+    Administator findByName(String username);
 }

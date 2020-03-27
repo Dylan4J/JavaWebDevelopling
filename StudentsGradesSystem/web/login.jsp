@@ -32,6 +32,7 @@
             var code = document.getElementById("vcode");
             code.src="${pageContext.request.contextPath}/checkCodeServlet?time="+new Date().getTime();
         }
+
     </script>
 </head>
 <body>
@@ -41,6 +42,7 @@
         <div class="form-group">
             <label for="username">用户名：</label>
             <input type="text" name="userName" class="form-control" id="username" placeholder="请输入用户名"/>
+
         </div>
 
         <div class="form-group">

@@ -31,7 +31,8 @@ public class LoginFilter implements Filter {
                 requestURI.contains("/loginServlet") ||
                 requestURI.contains("/css/")||
                 requestURI.contains("/js/")||
-                requestURI.contains("/fonts/")){
+                requestURI.contains("/fonts/")||
+                requestURI.contains("/loginUserNameServlet")){
             //资源放行
             chain.doFilter(request, response);
         }else{

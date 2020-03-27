@@ -33,6 +33,23 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#name").blur(function () {
+                var username = $(this).val();
+                $.post("nameCheckServlet", {"name":username}, function (data) {
+                    var s = $("#usernameCheck");
+                    if (data.exist){
+                        s.css("color","red");
+                        s.html(data.msg);
+                    }else{
+                        s.css("color","green");
+                        s.html(data.msg);
+                    }
+                });
+            });
+        })
+    </script>
 </head>
 <body>
 <div class="container">
@@ -41,6 +58,7 @@
         <div class="form-group">
             <label for="name">姓名：</label>
             <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名">
+            <span id="usernameCheck"></span>
         </div>
 
         <div class="form-group">

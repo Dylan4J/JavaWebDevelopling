@@ -1,6 +1,7 @@
 package cn.cqu.studentsgradessystem.dao.impl;
 
 import cn.cqu.studentsgradessystem.dao.ListDao;
+import cn.cqu.studentsgradessystem.domain.Administator;
 import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.utils.JDBCUtil;
 import org.apache.taglibs.standard.tag.common.core.ForEachSupport;
@@ -137,6 +138,18 @@ public class ListDaoImpl implements ListDao {
         String sql = s.toString();
         Integer count = template.queryForObject(sql, Integer.class,paras.toArray());
         return count;
+    }
+
+    @Override
+    public Administator findByName(String username) {
+        String sql = "select * from students where name = ?";
+        try {
+            Administator administator = template.queryForObject(sql, new BeanPropertyRowMapper<>(Administator.class), username);
+            return administator;
+        }catch (Exception e){
+            return null;
+        }
+
     }
 
 

@@ -1,5 +1,6 @@
 package cn.cqu.studentsgradessystem.dao;
 
+import cn.cqu.studentsgradessystem.domain.Administator;
 import cn.cqu.studentsgradessystem.domain.Student;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface ListDao {
     List<Student> findByPage(int currentPage, int rows, Map<String,String[]> condition);
 
     int getTotalCount(Map<String,String[]> condition);
+
+    Administator findByName(String username);
 }

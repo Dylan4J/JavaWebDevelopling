@@ -2,6 +2,7 @@ package cn.cqu.studentsgradessystem.service.impl;
 
 import cn.cqu.studentsgradessystem.dao.ListDao;
 import cn.cqu.studentsgradessystem.dao.impl.ListDaoImpl;
+import cn.cqu.studentsgradessystem.domain.Administator;
 import cn.cqu.studentsgradessystem.domain.PageBean;
 import cn.cqu.studentsgradessystem.domain.Student;
 import cn.cqu.studentsgradessystem.service.ListService;
@@ -62,6 +63,12 @@ public class ListServiceImpl implements ListService {
         pb.setTotalCount(totalCount);
         pb.setTotalPage(totalPage);
         return pb;
+    }
+
+    @Override
+    public Administator findByName(String username) {
+
+        return listDao.findByName(username);
     }
 
 

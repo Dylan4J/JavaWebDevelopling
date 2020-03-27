@@ -10,9 +10,13 @@ public class AdministratorDaoImpl implements AdministratorDao {
     private JdbcTemplate jdbcTemplate = new JdbcTemplate(JDBCUtil.getDataSource());
     public Administator login(Administator loginAdministator){
         String sql = "select * from administator where username = ? and password = ?";
-        Administator admi = jdbcTemplate.queryForObject(sql,
-                new BeanPropertyRowMapper<>(Administator.class),
-                loginAdministator.getUserName(),loginAdministator.getPassword());
-        return admi;
+        try {
+            Administator admi = jdbcTemplate.queryForObject(sql,
+                    new BeanPropertyRowMapper<>(Administator.class),
+                    loginAdministator.getUserName(),loginAdministator.getPassword());
+            return admi;
+        }catch ( Exception e ){
+        return null;
+        }
     }
 }
